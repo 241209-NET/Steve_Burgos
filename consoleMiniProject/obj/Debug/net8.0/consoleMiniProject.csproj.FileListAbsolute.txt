@@ -1,0 +1,15 @@
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/bin/Debug/net8.0/consoleMiniProject
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/bin/Debug/net8.0/consoleMiniProject.deps.json
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/bin/Debug/net8.0/consoleMiniProject.runtimeconfig.json
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/bin/Debug/net8.0/consoleMiniProject.dll
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/bin/Debug/net8.0/consoleMiniProject.pdb
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.AssemblyInfoInputs.cache
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.AssemblyInfo.cs
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.csproj.CoreCompileInputs.cache
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.sourcelink.json
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.dll
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/refint/consoleMiniProject.dll
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.pdb
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/consoleMiniProject.genruntimeconfig.cache
+/Users/steveburgos/Revature/Steve_Burgos/consoleMiniProject/obj/Debug/net8.0/ref/consoleMiniProject.dll
