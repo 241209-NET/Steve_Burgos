@@ -1,11 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 string filePath = "list.txt";
 
-List<String> myList = new List<string>();
+List<string> myList = new List<string>();
 
 if (File.Exists(filePath)){myList.AddRange(File.ReadAllLines(filePath));}
 
 Console.Clear();
+
 while (true)
 {
     string input = Menu();
@@ -21,7 +22,7 @@ string Menu() {
    string error = "";
         do
         {
-            Console.Clear();  // Clear the console every time before showing the menu
+            Console.Clear();  
             Console.WriteLine("Press a key");
             Console.WriteLine("A. View List");
             Console.WriteLine("B. Add to List");
@@ -32,10 +33,8 @@ string Menu() {
                 Console.WriteLine(error);
             }
 
-            // Wait for a key press
-            ConsoleKeyInfo keyInfo = Console.ReadKey(true);  // 'true' to hide the key pressed in the console
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);  
 
-            // Check which key was pressed
             if (keyInfo.Key == ConsoleKey.A)
             {
                 input = "A";
@@ -76,8 +75,7 @@ void AddList() {
 }
 void RemoveList() {
     string input = Console.ReadLine();
-    // Step 4: Remove the item if it exists in the list
-        if (!string.IsNullOrEmpty(input))  // Only attempt to remove if the input is not empty
+        if (!string.IsNullOrEmpty(input))  
         {
             if (myList.Contains(input))
             {
