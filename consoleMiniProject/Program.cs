@@ -74,6 +74,7 @@ void AddList() {
     File.WriteAllLines(filePath, myList);
 }
 void RemoveList() {
+     Console.Write("Type item for removal: ");
     string input = Console.ReadLine();
         if (!string.IsNullOrEmpty(input))  
         {
