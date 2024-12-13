@@ -70,7 +70,7 @@ void ViewList() {
 }
 void AddList() {
     Console.Write("Type item for list: ");
-    myList.Add(Console.ReadLine());
+    myList.Add(Console.ReadLine().ToLower());
     File.WriteAllLines(filePath, myList);
 }
 void RemoveList() {
