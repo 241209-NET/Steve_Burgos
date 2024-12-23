@@ -1,0 +1,54 @@
+# .NET Core build files
+bin/
+obj/
+
+# ASP.NET Core User Secrets and local config files
+.vs/
+.idea/
+.vscode/
+
+# Entity Framework Core migrations
+# Uncomment if you want to ignore migrations
+# Migrations folder can be useful if you want to exclude it in shared repos
+Migrations/
+
+# ASP.NET Core lock files
+project.lock.json
+project.fragment.lock.json
+
+# User-specific files
+# Windows Installer logs
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer database
+*.log
+
+# User-specific files from Visual Studio for Mac
+.vscode/
+.idea/
+
+# User-specific files from Visual Studio
+.vs/
+
+# Ignore any Vault keys or secrets (adjust the names of the secret files to match your app's naming convention)
+secrets.json
+appsettings.Development.json
+
+# Ignore .env files containing environment variables (if applicable)
+.env
+
+# Ignore Azure pipelines build files (if applicable)
+.azure-pipelines.yml
+
+# Ignore npm, yarn, or other client-side build artifacts (if using front-end)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore apsettings
+appsettings.json
+appsettings.Development.json
+Properties/
