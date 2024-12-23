@@ -33,7 +33,7 @@ string Menu() {
                 Console.WriteLine(error);
             }
 
-            ConsoleKeyInfo keyInfo = Console.ReadKey(true);  
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
 
             if (keyInfo.Key == ConsoleKey.A)
             {

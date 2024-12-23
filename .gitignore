@@ -1,0 +1,48 @@
+# .NET build files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows image file formats
+*.vhd
+*.vhdx
+
+# Windows Installer logs
+*.cab
+*.msi
+*.msm
+*.msp
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails (macOS creates thumbnails for folders)
+._*
+
+# VS Code settings
+.vscode/
+
+# JetBrains Rider IDE settings
+.idea/
+
+# npm and Node.js modules (if any)
+node_modules/
+
+# ASP.NET Core development certificates
+*.pfx
+
+# ASP.NET temporary files
+wwwroot/
