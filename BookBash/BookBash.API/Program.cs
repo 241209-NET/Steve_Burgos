@@ -2,8 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using BookBash.API.Data;
 using BookBash.API.Repository;
 using BookBash.API.Service;
-using Bookbash.API.Service;
-using PetTracker.API.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +17,10 @@ builder.Services.AddSwaggerGen();
 //Dependency Inject Proper Services
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+builder.Services.AddScoped<IAuthorBookRepository, AuthorBookRepository>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IBookListRepository, BookListRepository>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 
 //Add Controllers

@@ -40,7 +40,7 @@ public interface IBookListRepository
 {
     //CRUD
     BookList CreateNewBookList(BookList bookList); 
-    IEnumerable<BookList> GetAllBooks(); 
+    IEnumerable<BookList> GetAllBookLists(); 
     BookList? GetBookListByID(Guid id); 
     IEnumerable<Author> GetBookListByName(string name);
     void DeleteBookListByID(Guid id);    

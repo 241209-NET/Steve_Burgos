@@ -1,8 +1,7 @@
 using BookBash.API.Data;
 using BookBash.API.Model;
-using  BookBash.API.Repository;
 
-namespace PetTracker.API.Repository;
+namespace BookBash.API.Repository;
 
 public class AuthorRepository : IAuthorRepository
 {

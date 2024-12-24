@@ -1,7 +1,7 @@
 using BookBash.API.Model;
 using BookBash.API.Repository;
-using BookBash.API.Service;
-namespace Bookbash.API.Service;
+
+namespace BookBash.API.Service;
 
 public class AuthorService : IAuthorService
 {
