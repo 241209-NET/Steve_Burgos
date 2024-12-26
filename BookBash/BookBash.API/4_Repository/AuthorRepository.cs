@@ -42,7 +42,7 @@ public class AuthorRepository : IAuthorRepository
         
     }
 
-    public void DeleteAuthorByID(Guid id)
+    public Author DeleteAuthorByID(Guid id)
     {
 
        Author? author = GetAuthorByID(id);
@@ -59,6 +59,8 @@ public class AuthorRepository : IAuthorRepository
         _authorContext.Authors.Remove(author);
 
         _authorContext.SaveChanges();
+
+        return author;
     }
 
     public IEnumerable<Author> GetAuthorByName(string name)

@@ -6,7 +6,7 @@ namespace BookBash.API.Model
         public required string BookISBN { get; set; }
 
         // Navigation properties
-        public required Author Author { get; set; }
-        public required Book Book { get; set; }
+        public  Author Author { get; set; }
+        public  Book Book { get; set; }
     }
 }

@@ -26,5 +26,22 @@ public interface IBookListService
     IEnumerable<BookList> GetAllBookLists();
     BookList? GetBookListByID(Guid id);
     IEnumerable<BookList> GetBookListByName(string name);
-    Book? DeleteBookListByID(Guid id);
+    BookList? DeleteBookListByID(Guid id);
+}
+
+public interface IAuthorBookService
+{
+    //CRUD
+    AuthorBook CreateNewAuthorBook(AuthorBook authorBook); 
+    IEnumerable<AuthorBook> GetAllAuthorBooks(); 
+    AuthorBook GetAuthorBookByID(Guid id); 
+    AuthorBook? DeleteAuthorBookByID(Guid id);    
+}
+public interface IBookBookListService
+{
+    //CRUD
+    BookBookList CreateNewBookBookList(BookBookList bookBookList); 
+    IEnumerable<BookBookList> GetAllBookBookLists(); 
+    BookBookList GetBookBookListByID(Guid id); 
+    BookBookList? DeleteBookBookListByID(Guid id);    
 }

@@ -21,7 +21,7 @@ public class BookRepository : IBookRepository
         return book;
     }
 
-    public void DeleteBookByISBN(string isbn)
+    public Book DeleteBookByISBN(string isbn)
     {
          Book? book = GetBookByISBN(isbn);
 
@@ -37,6 +37,8 @@ public class BookRepository : IBookRepository
         _bookContext.Books.Remove(book);
 
         _bookContext.SaveChanges();
+
+        return book;
 
     }
 

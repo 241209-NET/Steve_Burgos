@@ -16,11 +16,16 @@ builder.Services.AddSwaggerGen();
 
 //Dependency Inject Proper Services
 builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IAuthorBookService, AuthorBookService>();
+builder.Services.AddScoped<IBookListService, BookListService>();
+builder.Services.AddScoped<IBookBookListService, BookBookListService>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IAuthorBookRepository, AuthorBookRepository>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookListRepository, BookListRepository>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IBookBookListRepository, BookBookListRepository>();
 
 
 //Add Controllers

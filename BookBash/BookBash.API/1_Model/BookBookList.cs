@@ -6,7 +6,7 @@ namespace BookBash.API.Model
         public required Guid BookListID { get; set; } // Foreign key to BookList
 
         // Navigation properties
-        public required Book Book { get; set; }
-        public required BookList BookList { get; set; }
+        public  Book Book { get; set; }
+        public  BookList BookList { get; set; }
     }
 }

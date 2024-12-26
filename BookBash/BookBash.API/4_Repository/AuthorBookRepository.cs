@@ -20,7 +20,7 @@ public class AuthorBookRepository : IAuthorBookRepository
         return authorBook;
     }
 
-    public void DeleteAuthorBookByID(Guid id)
+    public AuthorBook DeleteAuthorBookByID(Guid id)
     {
          AuthorBook? authorBook = GetAuthorBookByID(id);
 
@@ -36,7 +36,8 @@ public class AuthorBookRepository : IAuthorBookRepository
         _authorBookContext.AuthorBooks.Remove(authorBook);
 
         _authorBookContext.SaveChanges();
-
+        
+        return authorBook;
     }
 
     public IEnumerable<AuthorBook> GetAllAuthorBooks()

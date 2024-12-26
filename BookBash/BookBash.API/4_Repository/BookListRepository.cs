@@ -21,7 +21,7 @@ public class BookListRepository : IBookListRepository
         return bookList;
     }
 
-    public void DeleteBookListByID(Guid id)
+    public BookList DeleteBookListByID(Guid id)
     {
          BookList? bookList = GetBookListByID(id);
 
@@ -37,6 +37,8 @@ public class BookListRepository : IBookListRepository
         _bookListContext.BookLists.Remove(bookList);
 
         _bookListContext.SaveChanges();
+
+        return bookList;
 
     }
 
