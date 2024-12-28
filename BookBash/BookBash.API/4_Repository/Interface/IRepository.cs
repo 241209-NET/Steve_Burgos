@@ -34,8 +34,7 @@ public interface IBookRepository
     IEnumerable<Book> GetAllBooks(); 
     Book GetBookByISBN(string isbn); 
     IEnumerable<Book> GetBookByTitle(string title);
-    Book DeleteBookByISBN(string isbn);    
-}
+    Book DeleteBookByISBN(string isbn);    }
 public interface IBookListRepository
 {
     //CRUD

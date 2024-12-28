@@ -45,14 +45,16 @@ public class BookListController : ControllerBase
         return Ok(_bookListService.DeleteBookListByID(id));
     }
 
-    [HttpPost("{bookListID}/book")]
-    public IActionResult AddBookToList([FromBody] string isbn, Guid bookListID)
+    [HttpPost("{id}/book")]
+    public IActionResult AddBookToList([FromBody] string isbn, Guid id)
     {
         BookBookList bookBookList = new BookBookList 
         {
             BookISBN = isbn,
-            BookListID = bookListID
+            BookListID = id
         };
         return Ok(_bookBookListService.CreateNewBookBookList(bookBookList));
     }
+
+    
 }

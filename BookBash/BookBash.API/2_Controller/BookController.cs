@@ -9,10 +9,13 @@ namespace BookBash.API.Controller;
 public class BookController : ControllerBase
 {   
     private readonly IBookService _bookService;
+    private readonly IBookListService _bookListService;
 
-    public BookController(IBookService bookService)
+    public BookController(IBookService bookService, IBookListService bookListService)
     {
         _bookService = bookService;
+        _bookListService = bookListService;
+
     }
 
     [HttpGet]
@@ -40,5 +43,12 @@ public class BookController : ControllerBase
         return Ok(_bookService.DeleteBookByISBN(isbn));
     }
     
+    [HttpGet("booklist/{bookListID}")]
+
+    public IActionResult GetBooksFromBookList(Guid bookListID)
+    {
+        
+        return Ok(_bookService.GetBookFromBookList(bookListID));
+    }
 
 }

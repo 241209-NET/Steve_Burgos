@@ -18,6 +18,7 @@ public interface IBookService
     Book? GetBookByISBN(string isbn);
     IEnumerable<Book> GetBookByTitle(string title);
     Book? DeleteBookByISBN(string isbn);
+    IEnumerable<Book> GetBookFromBookList(Guid bookListID);
 }
 
 public interface IBookListService

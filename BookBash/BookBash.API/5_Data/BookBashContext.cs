@@ -18,38 +18,45 @@ namespace BookBash.API.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configure primary key for Book
             modelBuilder.Entity<Book>()
-                .HasKey(b => new {b.ISBN});
+                .HasKey(b => b.ISBN);
 
-            // Composite key for AuthorBook (AuthorID, BookISBN)
+            // Configure composite key for AuthorBook (AuthorID, BookISBN)
             modelBuilder.Entity<AuthorBook>()
                 .HasKey(ab => new { ab.AuthorID, ab.BookISBN });
 
-            // Composite key for BookBookList (BookISBN, BookListID)
+            // Configure composite key for BookBookList (BookISBN, BookListID)
             modelBuilder.Entity<BookBookList>()
                 .HasKey(bb => new { bb.BookISBN, bb.BookListID });
 
-            // Configure many-to-many relationship between Author and Book via AuthorBook
+            // Configure relationship between AuthorBook and Author via foreign key
             modelBuilder.Entity<AuthorBook>()
-                .HasOne(ab => ab.Author)
-                .WithMany(a => a.AuthorBooks)
-                .HasForeignKey(ab => ab.AuthorID);
+                .HasOne<Author>() // No navigation property, just a foreign key relation
+                .WithMany()  // No navigation property on Author
+                .HasForeignKey(ab => ab.AuthorID)
+                .OnDelete(DeleteBehavior.Restrict);  // Adjust delete behavior as needed
 
+            // Configure relationship between AuthorBook and Book via foreign key
             modelBuilder.Entity<AuthorBook>()
-                .HasOne(ab => ab.Book)
-                .WithMany(b => b.AuthorBooks)
-                .HasForeignKey(ab => ab.BookISBN);
+                .HasOne<Book>() // No navigation property, just a foreign key relation
+                .WithMany()  // No navigation property on Book
+                .HasForeignKey(ab => ab.BookISBN)
+                .OnDelete(DeleteBehavior.Restrict);  // Adjust delete behavior as needed
 
-            // Configure many-to-many relationship between Book and BookList via BookBookList
+            // Configure relationship between BookBookList and Book via foreign key
             modelBuilder.Entity<BookBookList>()
-                .HasOne(bb => bb.Book)
-                .WithMany(b => b.BookBookLists)
-                .HasForeignKey(bb => bb.BookISBN);
+                .HasOne<Book>() // No navigation property, just a foreign key relation
+                .WithMany()  // No navigation property on Book
+                .HasForeignKey(bb => bb.BookISBN)
+                .OnDelete(DeleteBehavior.Restrict);  // Adjust delete behavior as needed
 
+            // Configure relationship between BookBookList and BookList via foreign key
             modelBuilder.Entity<BookBookList>()
-                .HasOne(bb => bb.BookList)
-                .WithMany(bl => bl.BookBookLists)
-                .HasForeignKey(bb => bb.BookListID);
+                .HasOne<BookList>() // No navigation property, just a foreign key relation
+                .WithMany()  // No navigation property on BookList
+                .HasForeignKey(bb => bb.BookListID)
+                .OnDelete(DeleteBehavior.Restrict);  // Adjust delete behavior as needed
         }
     }
 }
