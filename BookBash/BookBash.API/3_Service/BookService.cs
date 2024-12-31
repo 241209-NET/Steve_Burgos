@@ -51,15 +51,13 @@ public class BookService : IBookService
         IEnumerable<BookBookList> bookBookLists= _bookBookListRepository.GetAllBookBookLists();
 
 
-        // Step 2: Filter bookBookLists where the BookListID matches the provided bookListID
         bookBookLists = bookBookLists.Where(bbl => bbl.BookListID == bookListID);
 
-        // Step 3: Join the filtered bookBookLists with books based on ISBN
         books = bookBookLists
             .Join(books, 
-                bbl => bbl.BookISBN,    // key from bookBookList
-                book => book.ISBN,  // key from book
-                (bbl, book) => book); // Select the book itself
+                bbl => bbl.BookISBN,   
+                book => book.ISBN,  
+                (bbl, book) => book); 
 
         return books;
 
