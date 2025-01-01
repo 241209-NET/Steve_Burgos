@@ -21,9 +21,9 @@ public class BookBookListRepository : IBookBookListRepository
         return bookBookList;
     }
 
-    public BookBookList DeleteBookBookListByID(Guid id)
+    public BookBookList DeleteBookBookListByID(Guid id, string isbn)
     {
-         BookBookList? bookBookList = GetBookBookListByID(id);
+         BookBookList? bookBookList = GetBookBookListByID(id, isbn);
 
         if (bookBookList == null)
         {
@@ -52,7 +52,7 @@ public class BookBookListRepository : IBookBookListRepository
         return _bookBookListContext.BookBookLists.ToList();
     }
 
-    public BookBookList GetBookBookListByID(Guid id)
+    public BookBookList GetBookBookListByID(Guid id, string isbn)
     {
          if (_bookBookListContext.BookBookLists == null)
         {
@@ -60,7 +60,8 @@ public class BookBookListRepository : IBookBookListRepository
             throw new InvalidOperationException("BookBookList DbSet is null.");
         }
 
-        BookBookList? bookBookList = _bookBookListContext.BookBookLists.Find(id);
+        BookBookList? bookBookList = _bookBookListContext.BookBookLists
+        .FirstOrDefault(b => b.BookListID == id && b.BookISBN == isbn);
 
         if(bookBookList == null)
         {

@@ -43,6 +43,6 @@ public interface IBookBookListService
     //CRUD
     BookBookList CreateNewBookBookList(BookBookList bookBookList); 
     IEnumerable<BookBookList> GetAllBookBookLists(); 
-    BookBookList GetBookBookListByID(Guid id); 
-    BookBookList? DeleteBookBookListByID(Guid id);    
+    BookBookList GetBookBookListByID(Guid id, string isbn); 
+    BookBookList? DeleteBookBookListByID(Guid id, string isbn);    
 }

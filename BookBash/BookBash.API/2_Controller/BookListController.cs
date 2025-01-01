@@ -56,5 +56,11 @@ public class BookListController : ControllerBase
         return Ok(_bookBookListService.CreateNewBookBookList(bookBookList));
     }
 
+     [HttpDelete("{id}/book")]
+    public IActionResult DeleteBookFromList([FromBody] string isbn, Guid id)
+    {
+
+        return Ok(_bookBookListService.DeleteBookBookListByID(id, isbn));
+    }
     
 }

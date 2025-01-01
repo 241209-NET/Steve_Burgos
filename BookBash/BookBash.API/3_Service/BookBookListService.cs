@@ -15,11 +15,11 @@ public class BookBookListService : IBookBookListService
         return _bookBookListRepository.CreateNewBookBookList(bookBookList);
     }
 
-    public BookBookList? DeleteBookBookListByID(Guid id)
+    public BookBookList? DeleteBookBookListByID(Guid id, string isbn)
     {
-        var bookBookList = GetBookBookListByID(id);
+        var bookBookList = GetBookBookListByID(id, isbn);
 
-        if(bookBookList is not null) _bookBookListRepository.DeleteBookBookListByID(id);
+        if(bookBookList is not null) _bookBookListRepository.DeleteBookBookListByID(id, isbn);
 
         return bookBookList;
     }
@@ -29,9 +29,9 @@ public class BookBookListService : IBookBookListService
         return _bookBookListRepository.GetAllBookBookLists();
     }
 
-    public BookBookList GetBookBookListByID(Guid id)
+    public BookBookList GetBookBookListByID(Guid id, string isbn)
     {
-        return _bookBookListRepository.GetBookBookListByID(id);
+        return _bookBookListRepository.GetBookBookListByID(id, isbn);
     }
 
 }
