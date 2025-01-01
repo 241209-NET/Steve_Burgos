@@ -1,6 +1,6 @@
 # BookBash
 
-ook Bash is an API built with ASP.NET that allows users to create and manage booklists. Through this API, users can add books, authors, and create book lists. The API provides a simple way to organize books by associating them with different lists, and authors can be linked to their respective books.
+Book Bash is an API built with ASP.NET that allows users to create and manage booklists. Through this API, users can add books, authors, and create book lists. The API provides a simple way to organize books by associating them with different lists, and authors can be linked to their respective books.
 
 ## Project Members
 - Steve Burgos
